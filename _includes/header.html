@@ -3,12 +3,12 @@
     <a href="{{site.baseurl}}/" class="logo">{% if site.logo %}{{site.logo}}{% else %}Tech<span>Blog</span>{% endif %}</a>
     <nav class="main_menu">
       {% include header_list.html %}
-      <a href="javascript:void(0);" id="menu_anchor" class="icon">
+      <a id="menu_anchor" class="icon">
         <i class="fa fa-bars" id="line_icon"></i>
       </a>
     </nav>
   </div>
-  <nav class="responsive_menu" id="responsive_menu_id">
+  <nav class="responsive_menu" id="responsive_menu_id" data-collapsed="true">
     {% include header_list.html %}
   </nav>
 </header> <!-- End Section Header -->

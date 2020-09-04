@@ -37,7 +37,6 @@ function collapseSection(element) {
 
   // mark the section as "currently collapsed"
   element.setAttribute('data-collapsed', 'true');
-  console.log("collapsed")
 }
 
 function expandSection(element) {
@@ -57,7 +56,6 @@ function expandSection(element) {
 
   // mark the section as "currently not collapsed"
   element.setAttribute('data-collapsed', 'false');
-  console.log("expanded")
 }
 
 document.querySelector('#menu_anchor').addEventListener('click', function(e) {
