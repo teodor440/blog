@@ -1,0 +1,54 @@
+
+<nav class="pagination">
+  {% assign showmax = 2 %}
+
+  {% if paginator.previous_page %}
+
+    {% if paginator.previous_page == 1 %}
+      <a href="{{site.baseurl}}/">Prev</a>
+    {% else %}
+      <a href="{{site.baseurl}}/page{{ paginator.previous_page }}">Prev</a>
+    {% endif %}
+
+  {% else %}
+    <span class="disabled">Prev</span>
+  {% endif %}
+
+  {% if paginator.page == 1 %}
+    <span class="active">1</span>
+  {% else %}
+    {% assign cond = 1 | plus: showmax %}
+    {% if paginator.page <= cond %}
+      <a href="{{site.baseurl}}/">1</a>
+    {% endif %}
+  {% endif %}
+
+  {% assign cond = paginator.page | minus: showmax %}
+  {% if cond > 1 %}
+    {% assign minpage = paginator.page | minus: showmax %}
+  {% else %}
+    {% assign minpage = 2 %}
+  {% endif %}
+
+  {% assign cond = paginator.total_pages | minus: paginator.page %}
+  {% if cond > showmax %}
+    {% assign maxpage = paginator.page | plus: showmax %}
+  {% else %}
+    {% assign maxpage = paginator.total_pages %}
+  {% endif %}
+
+  {% for count in (minpage..maxpage) %}
+
+    {% if count == paginator.page %}
+      <span class="active">{{ count }}</span>
+    {% else %}
+      <a href="{{site.baseurl}}/page{{ count }}">{{ count }}</a>
+    {% endif %}
+  {% endfor %}
+
+  {% if paginator.next_page %}
+    <a href="{{site.baseurl}}/page{{ paginator.next_page }}">Next</a>
+  {% else %}
+    <span class="disabled">Next</span>
+  {% endif %}
+</nav> <!-- End Section Pagination -->

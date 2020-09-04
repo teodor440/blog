@@ -1,0 +1,68 @@
+logo: # add logo name
+title: Cybersecurity blog
+description: > # this means to ignore newlines until "baseurl:"
+  Cybersecurity research blog, bug hunting, bug bounty, web security research
+permalink: ':title/'
+baseurl: "/blog" # the subpath of your site, e.g. /blog
+url: "https://teodor440.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+
+# Banner settings
+video: banner.mp4 # add banner video. Add your video file to the folder video
+banner-title: # add banner title
+banner-desc: # add banner description
+
+# Author settings
+author-pic: avatar.png # your photo
+author-name: Teodor-Paul Tonghioiu # your name
+about-author: Bug bounty researcher # about author
+email: pawlo.public@gmail.com # your email
+phone: 0 # your pnone number
+website: https://teodor440.github.io/blog/about/ # you website
+
+# Social link
+google_url:    # add url link
+medium_url:    https://medium.com/@teopaul
+twitter_url:   https://twitter.com/teodor440
+hackerone_url: https://hackerone.com/pawlo?type=user
+bugcrowd_url:  https://bugcrowd.com/pawlo
+instagram_url: # add url link
+pinterest_url: # add url link
+dribbble_url:  # add url link
+facebook_url:  # add url link
+
+# Disqus
+discus_identifier: teodorsblog # add your discus identifier.  Not your username.  To get this, register your forum here with a unique ID: https://disqus.com/admin/create/
+
+# Newsletter
+mailchimp: # add your MailChimp form identifier. For example - blogenjoyfreedom.us16.list-manage.com/subscribe/post?u=cd56155d76ddeeb4c0bc4d080&amp;id=7a526cd13e
+
+# Tracker
+analytics:
+
+# Paginate
+paginate: 12
+
+# Build settings
+markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
+  math_engine: mathjax
+
+plugins_dir:
+  - jekyll-paginate
+  - jekyll-sitemap
+
+plugins:
+  - jekyll-paginate
+
+gems:
+  - jekyll-paginate
+  - jekyll-sitemap
+
+include: [_pages]
+exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock"]
+
+collections:
+  notes:
+    output: true
+    permalink: /notes/:categories/:title/

@@ -1,0 +1,52 @@
+---
+layout: default
+title: Notes
+permalink: /notes/
+---
+{% include header.html %}
+
+{% include banner.html %}
+
+<main class="page-content" aria-label="Content">
+<section class="chapters cf">
+  <div class="custom-note-layout">
+    <div class="note-description">
+      <img src={{ "/assets/img/note.jpeg" | prepend: site.baseurl }} alt="Image with a notebook" class="note-img">
+      <div class="my-notes color-fix">
+        <h2>My notes</h2>
+        <p>Those are the notes I consult when I work. They are not very explicit, but you might see some interesting things here.</p>
+      </div>
+    </div>
+
+    <!-- create categories array-->
+    {% assign categories_array = "" | split:"|" %}
+
+    <!--Add each unique 'my_collection' category to the array-->
+    {% for note in site.notes %}
+        {% for category in note.categories %}
+            {% assign categories_array = categories_array | push: category | uniq %}
+        {% endfor %}
+    {% endfor %}
+
+    {% for category in categories_array %}
+      <div class="note-description category-container">
+        <div class="note-layout">
+          <h1>{{ category }}</h1>
+        </div>
+        <div class="note-layout">
+          {% for note in site.notes %}
+            {% if note.category == category %}
+              <a href="{{note.url | prepend: site.baseurl}}" class="note-item">
+                  <h5 class="note-title">{{note.title}}</h5>
+              </a>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    {% endfor %}
+
+  </div>
+</section>
+</main>
+
+{% include footer.html %}
