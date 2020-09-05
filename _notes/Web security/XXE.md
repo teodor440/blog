@@ -63,6 +63,7 @@ Mentions:
 - You can use burp collaborator to monitor DNS queries to your server.
 - If out-of-band interactions are blocked you can try exploiting XXE to retrieve data by repurposing a local DTD. If a document's DTD uses a hybrid of internal and external DTD declarations, then the internal DTD can redefine entities that are declared in the external DTD. When this happens, the restriction on using an XML parameter entity within the definition of another parameter entity is relaxed. Now you can redefine an entity from that DTD and cause an error that is hopefully displayed.
 <br/>
+
 #### Exploiting **blind XXE** to **retrieve data via error messages**
 ```xml
 <!ENTITY % file SYSTEM "file:///etc/passwd">

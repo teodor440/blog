@@ -3998,7 +3998,7 @@ cite {
 }
 
 #banner .content .title {
-  font-size: 3.5rem;
+  font-size: 3.5em;
   margin: 0 0 1rem 0;
 }
 
@@ -4775,12 +4775,12 @@ cite {
     padding: 7rem 0;
   }
   #banner .content .title {
-    font-size: 2.5rem;
+    font-size: 2.5em;
     margin: 0 0 1rem 0;
   }
   #banner .content .sub_title {
-    font-size: 1.35rem;
-    line-height: 2rem;
+    font-size: 1.35em;
+    line-height: 2em;
     font-style: italic;
   }
   .chapters .chapter_inner .chapter_number {
@@ -5179,17 +5179,21 @@ code {
   color: white;
 }
 
-h1{font-size:2.2em;}
-h2{font-size:2em;}
+h1{font-size:2.5em;}
+h2{font-size:2.2em;}
 h3{font-size:1.8em;}
 h4{font-size:1.6em;}
-h5{font-size:1.5em;}
-h6{font-size:1.4em;}
+h5{font-size:1.45em;}
+h6{font-size:1.3em;}
 
 li {
 	font-size: 1em;
   line-height: 1.4em;
   margin: 0.25em 0em;
+}
+
+.post_content li {
+  color: #525c65;
 }
 
 ul, ol {
@@ -5198,6 +5202,11 @@ ul, ol {
 
 p>code {
   padding: 3px;
+}
+
+.entry_content img {
+  margin: 1em auto;
+  width: 100%
 }
 
 .note-layout>h1 {
@@ -5247,6 +5256,16 @@ a {
 
 @media only screen and (max-width: 768px) {
   .post_content {
+    max-width: 100%;
+  }
+
+  .category-container {
+    border-radius: 0px;
+    border: none;
+    max-width: 100%;
+  }
+
+  .note-description {
     max-width: 100%;
   }
 }
