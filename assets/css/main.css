@@ -5198,6 +5198,7 @@ li {
 
 ul, ol {
   line-height: 1.6em;
+  padding-left: 30px;
 }
 
 p>code {
