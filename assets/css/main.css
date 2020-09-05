@@ -5179,20 +5179,21 @@ code {
   color: white;
 }
 
-h1{font-size:44px;}
-h2{font-size:40px;}
-h3{font-size:34px;}
-h4{font-size:24px;}
-h5{font-size:20px;}
-h6{font-size:18px;}
+h1{font-size:2.2em;}
+h2{font-size:2em;}
+h3{font-size:1.8em;}
+h4{font-size:1.6em;}
+h5{font-size:1.5em;}
+h6{font-size:1.4em;}
 
 li {
-	font-size: 1.2em;
-  line-height: 1.6;
+	font-size: 1em;
+  line-height: 1.4em;
+  margin: 0.25em 0em;
 }
 
 ul, ol {
-  line-height: 1.6;
+  line-height: 1.6em;
 }
 
 p>code {
@@ -5242,4 +5243,10 @@ a {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .post_content {
+    max-width: 100%;
+  }
 }
