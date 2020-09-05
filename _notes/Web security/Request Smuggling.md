@@ -1,7 +1,8 @@
 ---
 layout: note
 title: "Request Smuggling"
-category: Web
+category: Web security
+tag: [Web security, Note]
 ---
 
 # Http Request Smuggling

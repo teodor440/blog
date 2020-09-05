@@ -1,7 +1,8 @@
 ---
 layout: note
 title: "Web Cache Poisoning"
-category: Web
+category: Web security
+tag: [Web security, Note]
 ---
 
 # Web cache poisoning

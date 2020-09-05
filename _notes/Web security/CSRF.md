@@ -1,7 +1,8 @@
 ---
 layout: note
 title: "CSRF"
-category: Web
+category: Web security
+tag: [Web security, Note]
 ---
 
 # Cross site request forgery

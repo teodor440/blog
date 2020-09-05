@@ -1,7 +1,8 @@
 ---
 layout: note
 title: "XXE"
-category: Web
+category: Web security
+tag: [Web security, Note]
 ---
 
 # XML External Entities

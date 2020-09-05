@@ -1,7 +1,8 @@
 ---
 layout: note
 title: "Server-side template injection"
-category: Web
+category: Web security
+tag: [Web security, Note]
 ---
 
 # Server-side template injection

@@ -1,7 +1,8 @@
 ---
 layout: note
 title: "Insecure Deserialization"
-category: Web
+category: Web security
+tag: [Web security, Note]
 ---
 
 # Insecure Deserialization

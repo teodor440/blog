@@ -58,29 +58,32 @@ function expandSection(element) {
   element.setAttribute('data-collapsed', 'false');
 }
 
-document.querySelector('#menu_anchor').addEventListener('click', function(e) {
-  if(!busy){
-    var section = document.querySelector('.responsive_menu');
-    var isCollapsed = section.getAttribute('data-collapsed') === 'true';
-    var icon = document.getElementById("line_icon");
+if($("#menu_anchor").length != 0) {
+  document.querySelector('#menu_anchor').addEventListener('click', function(e) {
+    if(!busy){
+      var section = document.querySelector('.responsive_menu');
+      var isCollapsed = section.getAttribute('data-collapsed') === 'true';
+      var icon = document.getElementById("line_icon");
 
-    busy = true;
-    if(isCollapsed) {
-      icon.style.color = "#C0334A";
-      var x = document.getElementById("responsive_menu_id");
-      x.className += " responsive";
-      expandSection(section)
-      section.setAttribute('data-collapsed', 'false')
+      busy = true;
+      if(isCollapsed) {
+        icon.style.color = "#C0334A";
+        var x = document.getElementById("responsive_menu_id");
+        x.className += " responsive";
+        expandSection(section)
+        section.setAttribute('data-collapsed', 'false')
 
 
-    } else {
-      icon.style.color = "white";
-      collapseSection(section)
+      } else {
+        icon.style.color = "white";
+        collapseSection(section)
+      }
+      busy = false;
     }
-    busy = false;
-  }
 
-});
+  });
+}
+
 
 /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
 // function myFunction() {

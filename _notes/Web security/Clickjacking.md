@@ -1,7 +1,8 @@
 ---
 layout: note
 title: "Clickjacking"
-category: Web
+category: Web security
+tag: [Web security, Note]
 ---
 
 # Clickjacking

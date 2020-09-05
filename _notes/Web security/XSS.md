@@ -1,7 +1,8 @@
 ---
 layout: note
 title: "XSS"
-category: Web
+category: Web security
+tag: [Web security, Note]
 ---
 
 # Cross site scripting

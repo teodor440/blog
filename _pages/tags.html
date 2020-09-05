@@ -4,31 +4,65 @@ title: Tags
 permalink: /tags/
 ---
 
+{% include header.html %}
+
 {% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
-{% assign tag_words = site_tags | split:',' | sort %}
+{% assign site_tags = site_tags | split:',' %}
+{% capture note_tags %}{% for tag in site.notes %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+{% assign note_tags =  site.notes | map: 'tag' | join: ','  | split: ',' | sort %}
+{% assign all_tags =  site_tags | concat: note_tags | uniq %}
+{% assign tag_words = all_tags %}
 
 <section id="tags">
   <h1> Tags in Blog</h1>
   <ul class="tags cf">
 <!--  cycles through tag list and creates header row of all tags used in site with accompanying per-tag counts...-->
-  {% for item in (0..site.tags.size) %}{% unless forloop.last %}
-    {% capture this_word %}{{ tag_words[item] | strip_newlines }}{% endcapture %}
-    <li ><a href="#{{ this_word | cgi_escape }}" class="tag">{{ this_word }} <span>({{ site.tags[this_word].size }})</span></a></li>
-  {% endunless %}{% endfor %}
+  {% for item in all_tags %}
+    {% if item != ""%}
+      {% capture this_word %}{{ item | strip_newlines }}{% endcapture %}
+
+      {% if ct %}
+        {% assign prev_ct = ct %}
+      {% else %}
+        {% assign prev_ct = 0 %}
+      {% endif %}
+
+      {% for i in note_tags %}
+        {% if i == item %}
+          {% capture current_ct %}{% increment ct %}{% endcapture %}
+        {% endif %}
+      {% endfor %}
+      {% assign final_ct = ct | minus: prev_ct %}
+
+      <li ><a href="#{{ this_word | cgi_escape }}" class="tag">{{ this_word }} <span>({{ site.tags[this_word].size | plus: final_ct }})</span></a></li>
+    {% endif %}
+  {% endfor %}
   </ul>
 <!--cycles through tag list and creates subheader for each tag name...-->
-  {% for item in (0..site.tags.size) %}{% unless forloop.last %}
-    {% capture this_word %}{{ tag_words[item] | strip_newlines }}{% endcapture %}
-  <h2 id="{{ this_word | cgi_escape }}">{{ this_word }}</h2>
-<!--  lists all posts corresponding to specific tag...-->
-    {% for post in site.tags[this_word] %}{% if post.title != null %}
-    <div class="tag_list">
-        <span><a href="{{ post.url }}">{{ post.title }}</a></span>
-        <small><span>{{ post.date | date_to_string }}</span></small>
-    </div>
-    {% endif %}{% endfor %}
-  {% endunless %}{% endfor %}
+  {% for item in all_tags %}
+    {% if item != "" %}
+      {% capture this_word %}{{ item | strip_newlines }}{% endcapture %}
+      <h2 id="{{ this_word | cgi_escape }}">{{ this_word }}</h2>
+      <!--  lists all posts corresponding to specific tag...-->
+      {% for post in site.tags[this_word] %}
+        {% if post.title != null %}
+          <div class="tag_list">
+              <span><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></span>
+              <small><span>{{ post.date | date_to_string }}</span></small>
+          </div>
+        {% endif %}
+      {% endfor %}
+      <!-- List all the notes corresponding to specific tag...-->
+      {% for note in site.notes %}
+        {% if note.tags contains item %}
+          <div class="tag_list">
+              <span><a href="{{ site.baseurl }}{{ note.url }}">{{ note.title }}</a></span>
+          </div>
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
     <div class="back_to_home">
-        <a href="{{site.baseurl}}/"><i class="fa fa-long-arrow-left" aria-hidden="true"></i> Back</a>        
+      <a href="{{site.baseurl}}/">Back</a>
     </div>
 </section>

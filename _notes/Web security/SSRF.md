@@ -1,7 +1,8 @@
 ---
 layout: note
 title: "SSRF"
-category: Web
+category: Web security
+tag: [Web security, Note]
 ---
 
 # Server Side Request Forgery

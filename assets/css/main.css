@@ -458,6 +458,7 @@ template {
  *
  * Copyright (c) 2017 Daniel Eden
  */
+
 .animated {
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
@@ -4294,7 +4295,7 @@ cite {
 
 .post header img {
   width: 100%;
-  max-height: 500px;
+  /* max-height: 500px; */
   vertical-align: middle;
 }
 
@@ -4482,7 +4483,7 @@ cite {
 
 #tags {
   background-color: #ffffff;
-  padding: 2rem 1rem 4rem;
+  padding: 2rem 3rem 4rem;
   width: 960px;
   max-width: 90%;
   margin: 7rem auto 7rem;
@@ -4503,18 +4504,19 @@ cite {
 #tags .tags li {
   float: left;
   margin: 0 0.5rem 0.5rem 0;
-  border: 1px solid #c0334a;
+  /* border: 1px solid #c0334a;
   -webkit-border-radius: 0.5rem;
           border-radius: 0.5rem;
   background-color: #d25469;
   -webkit-box-shadow: 0 2px 0 #c0334a;
           box-shadow: 0 2px 0 #c0334a;
   -webkit-transition: all .35s;
-  transition: all .35s;
+  transition: all .35s; */
 }
 
 #tags .tags li:hover {
   background-color: rgba(192, 51, 74, 0.75);
+  border-radius: 5px;
 }
 
 #tags .tags a {
@@ -4522,12 +4524,13 @@ cite {
   text-decoration: none;
   padding: 0.4rem 0.8rem;
   color: #ffffff;
+  border-radius: 5px;
 }
 
 #tags .tags a:active {
-  -webkit-transform: translateY(1px);
+  /* -webkit-transform: translateY(1px);
       -ms-transform: translateY(1px);
-          transform: translateY(1px);
+          transform: translateY(1px); */
 }
 
 #tags .tag_list a {
@@ -4702,6 +4705,7 @@ cite {
 }
 
 #banner,
+#tags,
 .main_header,
 .page-content,
 .post_content,
@@ -4716,6 +4720,7 @@ cite {
 }
 
 #banner,
+#tags,
 .main_header {
   -webkit-animation-delay: 0.5s;
           animation-delay: 0.5s;
@@ -5209,4 +5214,22 @@ p>code {
   margin-top: 60px;
   margin-bottom: 40px;
   border: 2px solid #1c1c1c;
+}
+
+#tags .tags a {
+  background-color: #C0334A;
+}
+
+#tags .back_to_home a {
+  text-decoration: none;
+  color: white;
+  background-color: #C0334A;
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  font-size: 1.3rem;
+}
+
+#tags .back_to_home a:hover,
+#tags .tags a:hover {
+  background-color: #D25469;
 }
