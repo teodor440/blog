@@ -4005,13 +4005,13 @@ cite {
   text-decoration: none;
   font-weight: 700;
   padding: 2rem;
-  font-family: Impact, fantasy;
+  font-family: Impact;
 }
 
 .main_header .logo span {
   color: #c0334a;
   font-weight: 400;
-  font-family: Impact, fantasy;
+  font-family: Impact;
 }
 
 .main_header nav a {

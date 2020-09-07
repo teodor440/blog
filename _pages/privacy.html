@@ -1,0 +1,25 @@
+---
+layout: default
+title: Tags
+permalink: /privacy/
+---
+
+{% include header.html %}
+
+{% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+{% assign site_tags = site_tags | split:',' %}
+{% capture note_tags %}{% for tag in site.notes %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+{% assign note_tags =  site.notes | map: 'tag' | join: ','  | split: ',' | sort %}
+{% assign all_tags =  site_tags | concat: note_tags | uniq %}
+{% assign tag_words = all_tags %}
+
+<section id="tags">
+  <h1> Privacy policy </h1>
+
+  <h2> Third parties </h2>
+  <p> I do not collect data about you or set any domain speicific cookies that may identify you, but in order to host this blog and allow comments on posts I rely on third party processors.
+  The page is hosted using GitHub Pages and comments are powered by Disqus. More about how those parties process your data can be found on their websites: <a href="https://docs.github.com/en/github/site-policy/github-privacy-statement#github-pages">GitHub</a>, <a href="https://help.disqus.com/en/articles/1717103-disqus-privacy-policy">Disqus</a>. </p>
+  <div class="back_to_home">
+    <a href="{{site.baseurl}}/">Back</a>
+  </div>
+</section>
