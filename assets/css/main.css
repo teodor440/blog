@@ -5231,7 +5231,7 @@ li {
 
 ul, ol {
   line-height: 1.6em;
-  padding-left: 25px;
+  padding-left: 1.75em;
 }
 
 p>code {
@@ -5288,8 +5288,8 @@ a {
     user-select: none;
 }
 
-.post p, .post ul, .post ol, .highlighter-rouge, {
-  margin-bottom: 0.5em;
+.post p, .post ul, .post ol, .highlighter-rouge {
+  margin-bottom: 0.5rem;
 }
 
 .post blockquote {
@@ -5335,5 +5335,9 @@ a {
     margin-left: -1.85rem;
     margin-right: -1.85rem;
     border-radius: 0;
+  }
+
+  ul, ol {
+    padding-left: 1.5em;
   }
 }
