@@ -3576,10 +3576,8 @@ template {
 .highlighter-rouge {
   color: #e74b3c;
   font-weight: 400;
-  margin-bottom: 2px;
+  margin-bottom: 0.5rem;
 }
-
-
 
 .highlight .hll {
   background-color: #ffc;
@@ -5233,7 +5231,7 @@ li {
 
 ul, ol {
   line-height: 1.6em;
-  padding-left: 30px;
+  padding-left: 25px;
 }
 
 p>code {
@@ -5290,6 +5288,34 @@ a {
     user-select: none;
 }
 
+.post p, .post ul, .post ol, .highlighter-rouge, {
+  margin-bottom: 0.5em;
+}
+
+.post blockquote {
+  margin: 1em 0;
+}
+
+.post ul, .post ol {
+  margin-top: 0;
+}
+
+.post li {
+  padding-left: 2px;
+  line-height: 1.6em;
+  font-size: 1.1em;
+}
+
+.post h2 { margin-bottom: 0.5em; }
+.post h3 { margin-bottom: 0.4em; }
+.post h4 { margin-bottom: 0.35em; }
+.post h5 { margin-bottom: 0.3em; }
+.post h6 { margin-bottom: 0.25em; }
+
+.highlighter-rouge {
+  margin-bottom: 1.5em;
+}
+
 @media only screen and (max-width: 768px) {
   .post_content {
     max-width: 100%;
@@ -5303,5 +5329,10 @@ a {
 
   .note-description {
     max-width: 100%;
+  }
+
+  .highlighter-rouge {
+    margin-left: -1.85rem;
+    margin-right: -1.85rem;
   }
 }
