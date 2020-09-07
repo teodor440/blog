@@ -5331,10 +5331,13 @@ a {
     max-width: 100%;
   }
 
-  .highlighter-rouge {
+  .highlight {
+    border-radius: 0;
+  }
+
+  .highlighter-rouge div {
     margin-left: -1.85rem;
     margin-right: -1.85rem;
-    border-radius: 0;
   }
 
   ul, ol {
