@@ -5334,5 +5334,6 @@ a {
   .highlighter-rouge {
     margin-left: -1.85rem;
     margin-right: -1.85rem;
+    border-radius: 0;
   }
 }
