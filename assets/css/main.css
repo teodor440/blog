@@ -3749,7 +3749,7 @@ template {
 
 /* Name.Exception */
 .highlight .nf {
-  color: #c0f;
+  color: #ac37cc;
 }
 
 /* Name.Function */
@@ -3774,7 +3774,7 @@ template {
 
 /* Name.Variable */
 .highlight .ow {
-  color: #000;
+  color: #ac37cc;
 }
 
 /* Operator.Word */
