@@ -7,8 +7,8 @@ tag: [CTF, Writeup, UNbreakable]
 img: UNbreakable2020/title.png
 ---
 
-On its first edition, UNbreakable is a promising CTF competition for high school and college students. It is hosted on the educational platform [cyberedu.ro](https://cyberedu.ro/) and backed by Bit Sentinel.
-Although aimed at students, the challanges are not that easy, so it is a good exercise for anyone to try solve them. In a nutshell I'd say they are supposed to be solved with little technical knowledge, rather more ingenuity and documentation research. Some of them I was able to solve during the contest, some after and some are still a mystery, as for now there are no other writeups online. Participation is open for anyone, but only students may receive prizes.  
+On its first edition, UNbreakable is a promising CTF competition for high school and college students. It is hosted on the educational platform [cyberedu.ro](https://cyberedu.ro/) and backed by Bit Sentinel.  
+Although aimed at students, the challanges are not that easy, so it is a good exercise for anyone interested to try solve them. Here I posted the solutions for the challenges I was able to solve during and after the contest. Participation is open for anyone, but only students may receive prizes.  
 Now the challanges!
 
 ## better-cat
