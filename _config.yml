@@ -4,7 +4,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Cybersecurity research blog, bug hunting, bug bounty, web security research
 permalink: ':title/'
 baseurl: "/" # the subpath of your site, e.g. /blog
-url: "https://teodor440.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://blog.pawlo.cf" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Banner settings
 video: banner.mp4 # add banner video. Add your video file to the folder video
@@ -17,7 +17,7 @@ author-name: Teodor-Paul Tonghioiu # your name
 about-author: Bug bounty researcher # about author
 email: pawlo.public@gmail.com # your email
 phone: 0 # your pnone number
-website: https://teodor440.github.io/blog/about/ # you website
+website: https://blog.pawlo.cf/about/ # you website
 
 # Social link
 google_url:    # add url link
